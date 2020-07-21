@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="webBookRequest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="UIControl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Consulta de Libro por ISBN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z0c-Ji-v5g">
+                                <rect key="frame" x="73" y="142" width="268" height="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BkD-Ny-yY4">
+                                <rect key="frame" x="73" y="270" width="268" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Book retrieved information" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gv3-uE-KKD">
+                                <rect key="frame" x="73" y="407" width="268" height="262"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PhC-wm-Iv5">
+                                <rect key="frame" x="189" y="710" width="36" height="30"/>
+                                <state key="normal" title="Clear"/>
+                                <connections>
+                                    <action selector="clearViewBook:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Em4-1x-vHd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zho-Vq-cb2">
+                                <rect key="frame" x="183" y="320" width="48" height="30"/>
+                                <state key="normal" title="Search"/>
+                                <connections>
+                                    <action selector="bookSearch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TYL-QJ-mpI"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ejemplo: 978-84-376-0494-7" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PAP-s9-6YW">
+                                <rect key="frame" x="91" y="241" width="232" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="PAP-s9-6YW" firstAttribute="centerX" secondItem="BkD-Ny-yY4" secondAttribute="centerX" id="DIj-ln-GVY"/>
+                            <constraint firstItem="Zho-Vq-cb2" firstAttribute="top" secondItem="BkD-Ny-yY4" secondAttribute="bottom" constant="16" id="DWL-iV-rwS"/>
+                            <constraint firstItem="BkD-Ny-yY4" firstAttribute="trailing" secondItem="Gv3-uE-KKD" secondAttribute="trailing" id="Do3-7N-x3U"/>
+                            <constraint firstItem="BkD-Ny-yY4" firstAttribute="centerX" secondItem="Zho-Vq-cb2" secondAttribute="centerX" id="FCC-ct-9rT"/>
+                            <constraint firstItem="Gv3-uE-KKD" firstAttribute="centerX" secondItem="PhC-wm-Iv5" secondAttribute="centerX" id="KN3-lI-e9y"/>
+                            <constraint firstItem="BkD-Ny-yY4" firstAttribute="top" secondItem="PAP-s9-6YW" secondAttribute="bottom" constant="8" id="SNj-dh-5AK"/>
+                            <constraint firstItem="z0c-Ji-v5g" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Uc9-vZ-nJs"/>
+                            <constraint firstItem="Gv3-uE-KKD" firstAttribute="top" secondItem="Zho-Vq-cb2" secondAttribute="bottom" constant="57" id="Ufk-z4-qmY"/>
+                            <constraint firstItem="z0c-Ji-v5g" firstAttribute="trailing" secondItem="BkD-Ny-yY4" secondAttribute="trailing" id="YNR-Gz-j38"/>
+                            <constraint firstItem="z0c-Ji-v5g" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="98" id="b93-Ja-58z"/>
+                            <constraint firstItem="PhC-wm-Iv5" firstAttribute="top" secondItem="Gv3-uE-KKD" secondAttribute="bottom" constant="41" id="fWE-6r-C6c"/>
+                            <constraint firstItem="PAP-s9-6YW" firstAttribute="top" secondItem="z0c-Ji-v5g" secondAttribute="bottom" constant="71" id="gJN-Sf-qnB"/>
+                            <constraint firstItem="z0c-Ji-v5g" firstAttribute="leading" secondItem="BkD-Ny-yY4" secondAttribute="leading" id="rfS-3y-Rat"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="PhC-wm-Iv5" secondAttribute="bottom" constant="122" id="t7r-eK-NV1"/>
+                            <constraint firstItem="BkD-Ny-yY4" firstAttribute="leading" secondItem="Gv3-uE-KKD" secondAttribute="leading" id="yen-XA-sZK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <action selector="backgroundTap:" destination="BYZ-38-t0r" eventType="touchDown" id="g3c-4J-CB8"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="inputISBN" destination="BkD-Ny-yY4" id="pcg-it-ll6"/>
+                        <outlet property="viewBook" destination="Gv3-uE-KKD" id="Tt9-1i-EnF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="115.84821428571428"/>
+        </scene>
+    </scenes>
+</document>
