@@ -26,20 +26,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Book retrieved information" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gv3-uE-KKD">
-                                <rect key="frame" x="73" y="407" width="268" height="262"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PhC-wm-Iv5">
-                                <rect key="frame" x="189" y="710" width="36" height="30"/>
-                                <state key="normal" title="Clear"/>
-                                <connections>
-                                    <action selector="clearViewBook:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Em4-1x-vHd"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zho-Vq-cb2">
                                 <rect key="frame" x="183" y="320" width="48" height="30"/>
                                 <state key="normal" title="Search"/>
@@ -47,30 +33,61 @@
                                     <action selector="bookSearch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TYL-QJ-mpI"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ejemplo: 978-84-376-0494-7" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PAP-s9-6YW">
-                                <rect key="frame" x="91" y="241" width="232" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ejemplo: 9780670691999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PAP-s9-6YW">
+                                <rect key="frame" x="110" y="241" width="200" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titulo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YKz-y2-L5o">
+                                <rect key="frame" x="0.0" y="391" width="414" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Sbu-wo-y2K">
+                                <rect key="frame" x="80" y="480" width="254" height="257"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Autores" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JcF-2u-eWO">
+                                <rect key="frame" x="0.0" y="423" width="414" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cnt-3i-EwG">
+                                <rect key="frame" x="189" y="797" width="36" height="30"/>
+                                <state key="normal" title="Clear"/>
+                                <connections>
+                                    <action selector="clearBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Z7q-Cy-a7R"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="PAP-s9-6YW" firstAttribute="centerX" secondItem="BkD-Ny-yY4" secondAttribute="centerX" id="DIj-ln-GVY"/>
-                            <constraint firstItem="Zho-Vq-cb2" firstAttribute="top" secondItem="BkD-Ny-yY4" secondAttribute="bottom" constant="16" id="DWL-iV-rwS"/>
-                            <constraint firstItem="BkD-Ny-yY4" firstAttribute="trailing" secondItem="Gv3-uE-KKD" secondAttribute="trailing" id="Do3-7N-x3U"/>
-                            <constraint firstItem="BkD-Ny-yY4" firstAttribute="centerX" secondItem="Zho-Vq-cb2" secondAttribute="centerX" id="FCC-ct-9rT"/>
-                            <constraint firstItem="Gv3-uE-KKD" firstAttribute="centerX" secondItem="PhC-wm-Iv5" secondAttribute="centerX" id="KN3-lI-e9y"/>
-                            <constraint firstItem="BkD-Ny-yY4" firstAttribute="top" secondItem="PAP-s9-6YW" secondAttribute="bottom" constant="8" id="SNj-dh-5AK"/>
-                            <constraint firstItem="z0c-Ji-v5g" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Uc9-vZ-nJs"/>
-                            <constraint firstItem="Gv3-uE-KKD" firstAttribute="top" secondItem="Zho-Vq-cb2" secondAttribute="bottom" constant="57" id="Ufk-z4-qmY"/>
-                            <constraint firstItem="z0c-Ji-v5g" firstAttribute="trailing" secondItem="BkD-Ny-yY4" secondAttribute="trailing" id="YNR-Gz-j38"/>
-                            <constraint firstItem="z0c-Ji-v5g" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="98" id="b93-Ja-58z"/>
-                            <constraint firstItem="PhC-wm-Iv5" firstAttribute="top" secondItem="Gv3-uE-KKD" secondAttribute="bottom" constant="41" id="fWE-6r-C6c"/>
-                            <constraint firstItem="PAP-s9-6YW" firstAttribute="top" secondItem="z0c-Ji-v5g" secondAttribute="bottom" constant="71" id="gJN-Sf-qnB"/>
-                            <constraint firstItem="z0c-Ji-v5g" firstAttribute="leading" secondItem="BkD-Ny-yY4" secondAttribute="leading" id="rfS-3y-Rat"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="PhC-wm-Iv5" secondAttribute="bottom" constant="122" id="t7r-eK-NV1"/>
-                            <constraint firstItem="BkD-Ny-yY4" firstAttribute="leading" secondItem="Gv3-uE-KKD" secondAttribute="leading" id="yen-XA-sZK"/>
+                            <constraint firstItem="JcF-2u-eWO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="0qj-G6-VoN"/>
+                            <constraint firstItem="Zho-Vq-cb2" firstAttribute="centerX" secondItem="YKz-y2-L5o" secondAttribute="centerX" id="1DO-TQ-8sl"/>
+                            <constraint firstItem="YKz-y2-L5o" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="JcF-2u-eWO" secondAttribute="trailing" id="1a7-HK-fE4"/>
+                            <constraint firstItem="cnt-3i-EwG" firstAttribute="top" secondItem="Sbu-wo-y2K" secondAttribute="bottom" constant="60" id="2oT-39-8vG"/>
+                            <constraint firstItem="BkD-Ny-yY4" firstAttribute="top" secondItem="PAP-s9-6YW" secondAttribute="bottom" constant="8" id="42U-NK-jmh"/>
+                            <constraint firstItem="z0c-Ji-v5g" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="BkD-Ny-yY4" secondAttribute="leading" id="6dX-tb-PF9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cnt-3i-EwG" secondAttribute="bottom" constant="35" id="I1P-xw-sPt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PAP-s9-6YW" secondAttribute="trailing" constant="104" id="J91-0Q-DCa"/>
+                            <constraint firstItem="Zho-Vq-cb2" firstAttribute="top" secondItem="BkD-Ny-yY4" secondAttribute="bottom" constant="16" id="Lqx-ss-ha0"/>
+                            <constraint firstItem="JcF-2u-eWO" firstAttribute="leading" secondItem="Sbu-wo-y2K" secondAttribute="leading" constant="-80" id="Ok4-JF-rxI"/>
+                            <constraint firstItem="YKz-y2-L5o" firstAttribute="top" secondItem="Zho-Vq-cb2" secondAttribute="bottom" constant="41" id="UnJ-OT-WLv"/>
+                            <constraint firstItem="PAP-s9-6YW" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="aXK-dk-W4P"/>
+                            <constraint firstItem="YKz-y2-L5o" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="JcF-2u-eWO" secondAttribute="leading" id="e9x-xC-SCJ"/>
+                            <constraint firstItem="YKz-y2-L5o" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fi5-fJ-7Fk"/>
+                            <constraint firstItem="JcF-2u-eWO" firstAttribute="centerX" secondItem="z0c-Ji-v5g" secondAttribute="centerX" id="icm-3K-i0B"/>
+                            <constraint firstItem="JcF-2u-eWO" firstAttribute="top" secondItem="YKz-y2-L5o" secondAttribute="bottom" constant="8" id="ixn-JP-s03"/>
+                            <constraint firstItem="z0c-Ji-v5g" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lvk-dA-fji"/>
+                            <constraint firstItem="JcF-2u-eWO" firstAttribute="trailing" secondItem="Sbu-wo-y2K" secondAttribute="trailing" constant="80" id="mPy-aC-XBd"/>
+                            <constraint firstItem="z0c-Ji-v5g" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="BkD-Ny-yY4" secondAttribute="trailing" id="nLd-II-xao"/>
+                            <constraint firstItem="PAP-s9-6YW" firstAttribute="top" secondItem="z0c-Ji-v5g" secondAttribute="bottom" constant="71" id="pot-XZ-v7Y"/>
+                            <constraint firstItem="Sbu-wo-y2K" firstAttribute="top" secondItem="JcF-2u-eWO" secondAttribute="bottom" constant="35" id="r5S-ma-2gU"/>
+                            <constraint firstItem="BkD-Ny-yY4" firstAttribute="centerX" secondItem="Zho-Vq-cb2" secondAttribute="centerX" id="tD2-CN-1io"/>
+                            <constraint firstItem="Sbu-wo-y2K" firstAttribute="centerX" secondItem="cnt-3i-EwG" secondAttribute="centerX" id="uSX-L2-7UP"/>
+                            <constraint firstItem="z0c-Ji-v5g" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="98" id="xmu-02-n6l"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <connections>
@@ -79,7 +96,9 @@
                     </view>
                     <connections>
                         <outlet property="inputISBN" destination="BkD-Ny-yY4" id="pcg-it-ll6"/>
-                        <outlet property="viewBook" destination="Gv3-uE-KKD" id="Tt9-1i-EnF"/>
+                        <outlet property="labelAutores" destination="JcF-2u-eWO" id="jhd-P9-dVC"/>
+                        <outlet property="labelTitulo" destination="YKz-y2-L5o" id="eja-Qd-hFQ"/>
+                        <outlet property="uiImageViewCover" destination="Sbu-wo-y2K" id="9RR-hI-YqX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
